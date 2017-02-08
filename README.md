@@ -1,4 +1,4 @@
-website to [WaifuNet](https://github.com/leyhline/WaifuNet) repository using [Flask](http://flask.pocoo.org/) and [Pure](https://purecss.io/).
+Website to [WaifuNet](https://github.com/leyhline/WaifuNet) repository using [Flask](http://flask.pocoo.org/) and [Pure](https://purecss.io/).
 
 pls dont hack :(
 
