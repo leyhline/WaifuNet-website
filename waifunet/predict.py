@@ -7,6 +7,10 @@ Return predicted probabilities for image classification.
 """
 
 
+# Change backend of matplotlib so it needs no display server.
+import matplotlib
+matplotlib.use("Agg")
+
 import io
 import cv2
 import numpy as np
