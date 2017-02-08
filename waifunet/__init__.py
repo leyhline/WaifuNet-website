@@ -1,0 +1,1 @@
+from .waifunet import app

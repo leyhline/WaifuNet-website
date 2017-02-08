@@ -1,0 +1,3 @@
+graft waifunet/templates
+graft waifunet/static
+include waifunet/weights.hdf5
