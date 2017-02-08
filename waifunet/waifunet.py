@@ -13,7 +13,7 @@ import cv2
 import os
 from flask import Flask, render_template, request, redirect, url_for, send_file
 from werkzeug.utils import secure_filename
-from predict import SimpleConvNet
+from .predict import SimpleConvNet
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024
