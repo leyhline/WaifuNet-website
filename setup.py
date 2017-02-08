@@ -5,6 +5,6 @@ setup(
     packages=['waifunet'],
     include_package_data=True,
     install_requires=[
-        'flask', 'keras', 'numpy', 'matplotlib', 'opencv-python'
+        'flask', 'keras', 'numpy', 'matplotlib', 'opencv-python', 'h5py'
     ]
 )
