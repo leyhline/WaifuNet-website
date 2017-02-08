@@ -1,4 +1,4 @@
-website to [WaifuNet repository](https://github.com/leyhline/WaifuNet)
+website to [WaifuNet](https://github.com/leyhline/WaifuNet) repository
 
 pls dont hack :(
 
