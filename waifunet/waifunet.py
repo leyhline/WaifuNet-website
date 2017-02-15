@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-A simple Flask web app for showing the results of my WaifuNet deep learning project.
+A simple Flask web app for showing the results
+of my WaifuNet deep learning project.
 
 Created on Mon Feb 6 13:59:38 2017
 
@@ -12,7 +13,6 @@ import numpy as np
 import cv2
 import os
 from flask import Flask, render_template, request, redirect, url_for, send_file
-from werkzeug.utils import secure_filename
 from .predict import SimpleConvNet
 
 app = Flask(__name__)
