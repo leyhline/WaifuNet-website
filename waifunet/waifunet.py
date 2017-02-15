@@ -17,8 +17,10 @@ from .predict import SimpleConvNet
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024
-app.config.update({"MODEL":SimpleConvNet(),
-                   "ALLOWED_EXTENSIONS":{".png", ".jpg", ".jpeg"}})
+app.config.update({"ALLOWED_EXTENSIONS":{".png", ".jpg", ".jpeg"}})
+
+# Throws an error if run in flask's debug mode.
+model = SimpleConvNet()
 
 def allowed_file(filename):
     return os.path.splitext(filename)[1] in app.config["ALLOWED_EXTENSIONS"]
@@ -26,7 +28,6 @@ def allowed_file(filename):
 @app.route("/", methods=["GET", "POST"])
 def index():
     return render_template("index.html")
-
 
 @app.route("/display", methods=["POST"])
 def display_image():
@@ -36,6 +37,6 @@ def display_image():
             img = np.frombuffer(img.read(), dtype=np.int8)
             img = cv2.imdecode(img, cv2.IMREAD_COLOR)
             if img is not None:
-                plot = app.config["MODEL"].plot_prediction(img)
+                plot = model.plot_prediction(img)
                 return send_file(plot, mimetype='image/png', cache_timeout=1, add_etags=False)
     return redirect(url_for("index"))
